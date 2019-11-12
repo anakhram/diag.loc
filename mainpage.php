@@ -34,12 +34,18 @@
             <p> Дата рождения: <?php echo $result["dateb"] ?> </p>
             <p> Место регистрации: <?php echo $result["placeReg"] ?></p>
             <p> Контактный номер: <?php echo $result["telNum"] ?> </p>
-            <p> Местность: <?php echo($result["terr"]) ?> </p>
-            <p> Полис : <?php echo($result["polis"]) ?> </p>
+            <p> Местность: <?php echo ($result["terr"]) ?> </p>
+            <p> Полис : <?php echo ($result["polis"]) ?> </p>
             <p> СНИЛС : <?php echo $result["SNILS"] ?> </p>
-            <p> Код категории льготы: <?php echo $result["numPriv"]?></p>
-            <p> Тип документа: <?php echo $result["typeDoc"]?></p>
-            <p> Номер документа: <?php echo $result["numDoc"]?></p>
+            <p> Код категории льготы: <?php echo $result["numPriv"] ?></p>
+            <p> Тип документа: <?php echo $result["typeDoc"] ?></p>
+            <p> Номер документа: <?php echo $result["numDoc"] ?></p>
+            <form action="exitcookie.php" method="get">
+                <button type="submit">Выйти</button>
+            </form>
+            <form action="startDiagnostic.php" method="get">
+                <button type="submit"> Начать диагностику </button>
+            </form>
     <?php
         }
         $res = mysqli_fetch_all($sql);
