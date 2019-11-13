@@ -15,18 +15,18 @@
     $mysql = new mysqli('localhost', 'root', '', 'registr-bd');
     $query = mysqli_query($mysql, 'SELECT * FROM `attributes`');
     ?>
-    <form action="intensity.php">
+    <form action="intensity.php" method="post">
         <?php
         while ($rows = mysqli_fetch_assoc($query)) { ?>
-            <p><input type="checkbox" name=<?php $rows['idA'] ?>\
-            value=<?php $rows['nameA'] ?>> <?php echo $rows["idA"] . " " . $rows["nameA"] ?> </p>
+            <p><input type="checkbox" name="attributes[<? echo $rows['idA']?>]" value = "<?php echo $rows['nameA'] ?>">
+                <?php echo $rows["idA"] . " " . $rows["nameA"] ?> </p>
         <?php
         }
         ?>
         <p><input type="submit" value="Отправить"></p>
     </form>
-    <form action = "manual.php" method = "get">
-        <p> <input type = "submit" value = "Добавить"></p>
+    <form action="manual.php" method="get">
+        <p> <input type="submit" value="Добавить"></p>
     </form>
     <?php
     if ($mysql->connect_errno) {
