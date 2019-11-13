@@ -24,4 +24,3 @@ if (password_verify($pass, $user[pass])) {
 }
 
 $mysql->close();
-?>

@@ -8,7 +8,6 @@
 
 <body>
     <?php
-
     $host = 'localhost';
     $user = 'root';
     $pass = '';
@@ -43,7 +42,7 @@
             <form action="exitcookie.php" method="get">
                 <button type="submit">Выйти</button>
             </form>
-            <form action="startDiagnostic.php" method="get">
+            <form action="diagnostic.php" method="get">
                 <button type="submit"> Начать диагностику </button>
             </form>
     <?php
