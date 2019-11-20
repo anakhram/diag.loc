@@ -18,7 +18,7 @@
     <form action="intensity.php" method="post">
         <?php
         while ($rows = mysqli_fetch_assoc($query)) { ?>
-            <p><input type="checkbox" name="attributes[<? echo $rows['idA']?>]" value = "<?php echo $rows['nameA'] ?>">
+            <p><input type="checkbox" name="attributes[<? echo $rows['idA'] ?>]" value="<?php echo $rows['idA'] ?>">
                 <?php echo $rows["idA"] . " " . $rows["nameA"] ?> </p>
         <?php
         }
@@ -33,8 +33,9 @@
         echo "Не удалось подключиться: %s\n";
         exit();
     }
+    $mysql->close();
     ?>
-    <h5> *нажамите "Добавить"</h5>
+    <h5> *нажмите "Добавить"</h5>
 </body>
 
 </html>
